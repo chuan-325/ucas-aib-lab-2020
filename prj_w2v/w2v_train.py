@@ -15,7 +15,7 @@ def train(dir_txt, dir_model_out):
     print('[Model] Start!')
     model = word2vec.Word2Vec(sentences=buf,
                               size=200,
-                              window=5,
+                              window=8,
                               min_count=1)
     vocab = list(model.wv.vocab.keys())
     model.save(dir_model_out)
