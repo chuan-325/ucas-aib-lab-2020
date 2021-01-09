@@ -1,7 +1,7 @@
 import jieba
 import re
 
-
+# 读出停用词表
 def stopwordslist():
     stopwords = [
         line.strip()
@@ -12,7 +12,7 @@ def stopwordslist():
 
 stop_list = stopwordslist()
 
-
+# 分词
 def cutword(seg):
     dict = []
     words = jieba.cut(seg)
@@ -24,7 +24,7 @@ def cutword(seg):
     result = re.findall(acquire, string)
     return ' '.join(result)
 
-
+# IO
 def clean_up(input_path, output_path):
     to_write = open(output_path, 'w', encoding='UTF-8')
     with open(input_path, 'r', encoding='utf-8') as infile:
