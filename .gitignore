@@ -1,5 +1,3 @@
+.vscode/
 aib.code-workspace
 example/
-.vscode/
-processed-data/
-pdata-csv/
