@@ -63,5 +63,5 @@ def preprocessing_text_pd(text_dir,after_process_text_dir,stop_word_dir):
 
 
 if __name__ == "__main__":
-    stop_words =get_stop_words('dataset\stopwordslist.txt')
-    sentences = preprocessing_text_pd('dataset\14701_q.txt','dataset\14701_q_cut.txt','dataset\stopwordslist.txt')
+    stop_words =get_stop_words('dataset\\stopwordslist.txt')
+    sentences = preprocessing_text_pd('dataset\\14701_q.txt','dataset\\14701_q_cut.txt','dataset\\stopwordslist.txt')

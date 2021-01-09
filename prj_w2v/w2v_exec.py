@@ -55,23 +55,23 @@ def calc_vlist(vlist, question_list):
 
 
 if __name__ == '__main__':
-    model = word2vec.Word2Vec.load('model\w2v.model')
+    model = word2vec.Word2Vec.load('model\\w2v.model')
     vocab = set(model.wv.vocab.keys())
     # vqlist
     vqlist = []
-    with open('pdata-txt\in.txt', 'r', encoding='utf-8') as r_vq:
+    with open('pdata-txt\\in.txt', 'r', encoding='utf-8') as r_vq:
         for line in r_vq:
             vqlist.append(line)
     # rcv
     vlists = rcv_vset('test\\testset.txt',vocab)
     # question_list(washed)
     question_list =[]
-    with open('pdata-txt\out.txt', 'r', encoding='utf-8') as r_inq:
+    with open('pdata-txt\\out.txt', 'r', encoding='utf-8') as r_inq:
         for line in r_inq:
             question_list.append(line.split())
     # answer_list(unwashed)
     answer_list = []
-    with open('pdata-txt\ina.txt', 'r', encoding='utf-8') as r_ina:
+    with open('pdata-txt\\ina.txt', 'r', encoding='utf-8') as r_ina:
         for line in r_ina:
             answer_list.append(line)
     # valist

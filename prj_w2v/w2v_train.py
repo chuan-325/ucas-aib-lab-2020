@@ -22,4 +22,4 @@ def train(dir_txt, dir_model_out):
     print('[Model] Saved!')
 
 if __name__ == '__main__':
-    train('pdata-txt\out.txt', 'model\w2v.model')
+    train('pdata-txt\\out.txt', 'model\\w2v.model')
