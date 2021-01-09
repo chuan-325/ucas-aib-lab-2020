@@ -88,7 +88,6 @@ def json_encode(question, answer):
     json.dump(output, file)
     print(output)
 
-
 if __name__ == '__main__':
     # 准备模型
     model = word2vec.Word2Vec.load('model\\w2v.model')    # 加载 model 文件
@@ -100,7 +99,7 @@ if __name__ == '__main__':
     test_q_uc_list = []
     test_q_uc_list.append(json_decode('json\\test.json')) # 得到输入的测试问题
     test_q_list = cut_list(test_q_uc_list, vocab)         # 做分词和去生词等处理
-    # test a
+    # 准备生成答案
     test_a_list = []
     j = 0
     for vlist in test_q_list:
