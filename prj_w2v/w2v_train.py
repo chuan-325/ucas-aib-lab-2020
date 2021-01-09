@@ -15,11 +15,11 @@ def train(dir_txt, dir_model_out):
     print('[Model] Start!')
     model = word2vec.Word2Vec(sentences=buf,
                               size=200,
-                              window=8,
+                              window=5,
                               min_count=1)
     vocab = list(model.wv.vocab.keys())
     model.save(dir_model_out)
     print('[Model] Saved!')
 
 if __name__ == '__main__':
-    train('pdata-txt\\out.txt', 'model\\w2v.model')
+    train('dataset\\14701_q_cut.txt', 'model\\w2v.model')
