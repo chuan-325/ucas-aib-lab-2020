@@ -34,5 +34,5 @@ def clean_up(input_path, output_path):
 
 
 if __name__ == '__main__':
-    jieba.load_userdict('usr_dict.txt')
+    jieba.load_userdict('dataset\\usr_dict.txt')
     clean_up('dataset\\14701_q.txt', 'dataset\\14701_q_cut.txt')
