@@ -10,8 +10,8 @@ A team-project for ucas aib course honorly produced by [@XinyiYuan](https://gith
 ```
 File structure: (top level only)
 |
-|--- prj_sentencevec/  # sentence-vector method
-|--- prj_w2v/          # word-vector method
-|--- .gitignore
+|--- doc/                # report
+|--- prj_sentencevec/    # sentence-vector method
+|--- prj_w2v/            # word-vector method
 |--- README.md
 ```
