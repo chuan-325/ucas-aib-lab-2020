@@ -72,7 +72,8 @@ def json_decode(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         qr = json.load(f)
     print(qr)
-    return qr['question']
+    return qr['question']
+
 def json_encode(question, answer):
     output = {'question':question, 'answer':answer}
     file = open('json/output.json', 'w', encoding='utf-8')
@@ -88,6 +89,21 @@ def json_test(tfidf, word_ls, qa_set):
     ans = qa_set[index][1]
     json_encode(str(qr), str(ans))
 
+# 手动输入的测试
+def answer_qr(tfidf, word_ls, qa_set):
+    while True:
+        qr = input("请问有什么要问我的吗？（按'q'退出哦）")
+        start = time.perf_counter()
+        if qr == 'q':
+            print('拜拜～')
+            break
+        else:
+            ids_qr = process_query(qr, word_ls)
+            index = get_top_ans(ids_qr, tfidf, qr, qa_set)
+            ans = qa_set[index][1]
+            json_encode(str(qr), str(ans))  # 以json格式输出
+        print('Time used:', time.perf_counter() - start)
+    return
 
 # 准备模型
 start = time.perf_counter()
@@ -97,5 +113,8 @@ print('Time used:', time.perf_counter() - start)
 
 # 开始测试
 start = time.perf_counter()
+# json输入
 json_test(tfidf_matx, word_list, data_set)
 print('Time used:', time.perf_counter() - start)
+# 手动输入
+answer_qr(tfidf_matx, word_list, data_set)
