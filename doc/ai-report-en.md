@@ -196,9 +196,9 @@ The specific steps are as follows:
 
 #### 4.2.1  Data preprocessing
 
-先只保留问句中的汉字、字母和数字，并调用 `jieba_cut()` 将问句进行分词。
+When processing data, only Chinese characters, letters, and numbers would not be deleted. Call function `jieba_cut()` to divide the questions into words.
 
-因为问答系统中有很多人名，在 jieba 词典中添加了用户词典 `usr_dict` 。
+Add user dictionary `usr_dict` to *jieba dictionary*, since there are many names in the Q&A bot's training set.
 
 ```python
 # 分词
