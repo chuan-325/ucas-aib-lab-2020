@@ -1,1 +1,5 @@
 model/
+dataset/
+test/
+json/
+res.txt
